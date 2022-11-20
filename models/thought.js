@@ -3,7 +3,7 @@ const dateFormat = require('../utils/dateFormat')
 
 const thoughtSchema = new Schema(
     {
-        thoguhtText: {
+        thoughtText: {
             type: String,
             required: true,
             minLength: 1,

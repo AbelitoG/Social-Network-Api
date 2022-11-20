@@ -1,6 +1,4 @@
 const {Thought, User} = require("../models")
-const { updateOne } = require("../models/thought")
-
 
 
 
