@@ -2,8 +2,8 @@ const { getAll, getOne, createOne, updateOne, deleteOne, addReaction, deleteReac
 
 const router = require("express").Router()
 router.route('/').get(getAll).post(createOne)
-router.router('/:thoughtId').get(getOne).put(updateOne).delete(deleteOne)
-router.router('/:thoughtId/reactions').post(addReaction)
-router.router('/:thoughtId/reactions/:reactionId').delete(deleteReaction)
+router.route('/:thoughtId').get(getOne).put(updateOne).delete(deleteOne)
+router.route('/:thoughtId/reactions').post(addReaction)
+router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction)
 
 module.exports = router

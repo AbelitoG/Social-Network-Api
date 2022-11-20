@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat')
+const reactionSchema = require('./reaction')
 
 const thoughtSchema = new Schema(
     {
@@ -18,7 +19,7 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        reactions: [assignmentSchema],
+        reactions: [reactionSchema],
         
     },{
         // Mongoose supports two Schema options to transform Objects after querying MongoDb: toJSON and toObject.
